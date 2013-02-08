@@ -1,0 +1,31 @@
+﻿.container {
+    background-color:lightgrey;
+    width: 80%;
+    min-height:300px;
+    margin: 20px auto;
+}
+
+.progresspluginmask {
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-color:white;
+    opacity:.35;
+    z-index:10; 
+}
+
+.progressplugininfo {
+    position: absolute;
+    background-color: none;
+    z-index:15;
+    text-align:center;
+}
+
+.loadingimage
+{
+    background: url('images/loader2.gif') no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-position: 0px 0px;
+}
