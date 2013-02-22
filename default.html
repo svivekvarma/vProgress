@@ -5,15 +5,48 @@
     <link href="progressplugin.css" rel="stylesheet" />
     <script src="jquery-1.9.0.min.js"></script>
     <script src="progressplugin.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('div.container').progressplugin('show');
-        });
+    <style>
+        body {
+            background-color: rgb(49, 179, 168);
+        }
+
+        .container {
+            background-color: white;
+            width: 80%;
+            min-height: 300px;
+            margin: 20px auto;
+        }
+
+        #demo1target {
+            width:80%;
+            border-radius:5px;
+            border:1px solid grey;
+            box-shadow:1px 1px 5px grey;
+            margin:0px auto;
+        }
+    </style>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#demo1').click(function () {
+
+                    $('#demo1target').progressplugin('show');
+                });
+                
+            });
     </script>
 </head>
 <body>
     <div class="container">
-            Test content ......
+        <h1>Demo 1</h1>
+        <p>This demo shows when the progress plugin is targeting a dom element say a div.Please click to launch
+            <input type="button" id="demo1" value="Launch Demo1">
+        </p>
+        <div id="demo1target">
+            Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsuk
+
+        </div>
+
+
     </div>
 </body>
 </html>

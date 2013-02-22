@@ -20,7 +20,7 @@
                     var arrHTML = [];
                     arrHTML.push('<div class=\"progresspluginmask\">');
                     arrHTML.push('</div>');
-                    arrHTML.push('<div class=\"progressplugininfo\"><div>' + settings.message + '</div><div class=\'loadingimage\'></div></div>');
+                    arrHTML.push('<div class=\"progressplugininfo\"><div class="progresspluginmessage">' + settings.message + '</div><div class=\'loadingimage\'></div></div>');
                     $this.append(arrHTML.join(''));
                     $this.data('progressplugin', data);
                 }

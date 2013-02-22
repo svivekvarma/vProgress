@@ -1,16 +1,9 @@
-﻿.container {
-    background-color:lightgrey;
-    width: 80%;
-    min-height:300px;
-    margin: 20px auto;
-}
-
-.progresspluginmask {
+﻿.progresspluginmask {
     position:absolute;
     top:0px;
     left:0px;
-    background-color:white;
-    opacity:.35;
+    background-color:rgb(92, 95, 95);
+    opacity:.85;
     z-index:10; 
 }
 
@@ -21,11 +14,24 @@
     text-align:center;
 }
 
+.progresspluginmessage {
+    color:white;
+}
+
 .loadingimage
 {
-    background: url('images/loader2.gif') no-repeat;
-    width: 30px;
-    height: 30px;
+    background: url('images/loader.gif') no-repeat;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background-position: 0px 0px;
+}
+
+.metrostyleloading
+{
+    background: url('images/loader.gif') no-repeat;
+    width: 130px;
+    height: 12px;
     display: inline-block;
     background-position: 0px 0px;
 }
