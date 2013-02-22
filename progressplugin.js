@@ -1,6 +1,8 @@
 ﻿(function ($) {
     var defaults = {
-        message: "Loading data ..."
+        message: "Loading data ...",
+        prependMode: false,
+        appendMode: false
     };
     var settings = {};
 
@@ -18,25 +20,33 @@
                     data = $this.data('progressplugin');
                     data.parentPosition = $this.css('position');
                     var arrHTML = [];
-                    arrHTML.push('<div class=\"progresspluginmask\">');
+                    arrHTML.push('<div class="progresspluginmask">');
                     arrHTML.push('</div>');
-                    arrHTML.push('<div class=\"progressplugininfo\"><div class="progresspluginmessage">' + settings.message + '</div><div class=\'loadingimage\'></div></div>');
+                    arrHTML.push('<div class="progressplugininfo"><div class="progresspluginmessage">' + settings.message + '</div><div class="loadingimage"></div></div>');
                     $this.append(arrHTML.join(''));
                     $this.data('progressplugin', data);
                 }
+                var plugininfowidth = $this.children('.progressplugininfo:first').innerWidth();
+                var plugininfoheight = $this.children('.progressplugininfo:first').innerHeight();
 
                 $this.css({ position: "relative" });
-                if (data.isHidden) {
-                    $this.children('.progresspluginmask:first').show();
-                    $this.children('.progressplugininfo:first').show();
-                    data.isHidden = false;
-                    $this.data('progressplugin', data);
-                }
-                $this.children('.progresspluginmask:first').width($this.innerWidth());
-                $this.children('.progresspluginmask:first').height($this.innerHeight());
                 var leftcoord = $this.innerWidth() - $this.children('.progressplugininfo:first').width();
                 var topcoord = $this.innerHeight() - $this.children('.progressplugininfo:first').height();
+                if (leftcoord < 0) {
+                    $this.css('min-width', plugininfowidth + 'px');
+                }
+
+                if (topcoord < 0) {
+                    $this.css('min-height', plugininfoheight + 'px');
+                }
+                var leftcoord = $this.innerWidth() - $this.children('.progressplugininfo:first').width();
+                var topcoord = $this.innerHeight() - $this.children('.progressplugininfo:first').height();
+
                 $this.children('.progressplugininfo:first').css({ top: topcoord / 2 + 'px', left: leftcoord / 2 + 'px' });
+                $this.children('.progressplugininfo:first').css({ top: topcoord / 2 + 'px', left: leftcoord / 2 + 'px' });
+
+                $this.children('.progresspluginmask:first').width($this.innerWidth());
+                $this.children('.progresspluginmask:first').height($this.innerHeight());
 
                 $(window).bind('resize.progressplugin', function () {
 
@@ -60,9 +70,8 @@
                 if (!data) {
                     return $this;
                 }
-                if (!data.isHidden) {
-                    methods.hide.apply($this);
-                }
+
+                $this.css('position', data.parentPosition);
                 $this.children('.progresspluginmask:first').remove();
                 $this.children('.progressplugininfo:first').remove();
                 $this.removeData('progressplugin');

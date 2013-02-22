@@ -15,37 +15,62 @@
             width: 80%;
             min-height: 300px;
             margin: 20px auto;
+            padding: 10px 10px;
         }
 
-        #demo1target {
-            width:80%;
-            border-radius:5px;
-            border:1px solid grey;
-            box-shadow:1px 1px 5px grey;
-            margin:0px auto;
+        #demo1target, #demo2target {
+            width: 80%;
+            border-radius: 5px;
+            margin: 10px auto;
+            border: 1px solid grey;
+            padding: 10px;
         }
     </style>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('#demo1').click(function () {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#demo1').click(function () {
 
-                    $('#demo1target').progressplugin('show');
-                });
-                
+                $('#demo1target').progressplugin('show');
             });
+
+            $('#demo1close').click(function () {
+
+                $('#demo1target').progressplugin('hide');
+            });
+
+            $('#demo2').click(function () {
+
+                $('#demo2target').progressplugin('show');
+            });
+
+            $('#demo2close').click(function () {
+
+                $('#demo2target').progressplugin('hide');
+            });
+        });
     </script>
 </head>
 <body>
     <div class="container">
         <h1>Demo 1</h1>
-        <p>This demo shows when the progress plugin is targeting a dom element say a div.Please click to launch
+        <p>
+            This demo shows when the progress plugin is targeting a dom element say a div.Please click to launch
             <input type="button" id="demo1" value="Launch Demo1">
+            <input type="button" id="demo1close" value="Close Demo1">
         </p>
         <div id="demo1target">
             Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsuk
 
         </div>
 
+        <h1>Demo 2</h1>
+        <p>
+            This demo shows when the progress plugin is targeting a dom element say a div but the di doesnt have any content in it.Please click to launch
+            <input type="button" id="demo2" value="Launch Demo2">
+            <input type="button" id="demo2close" value="Close Demo2">
+        </p>
+        <div id="demo2target">
+        </div>
 
     </div>
 </body>

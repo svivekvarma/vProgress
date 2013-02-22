@@ -1,10 +1,10 @@
 ﻿.progresspluginmask {
-    position:absolute;
-    top:0px;
-    left:0px;
-    background-color:rgb(92, 95, 95);
-    opacity:.85;
-    z-index:10; 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(128, 128, 128);
+    opacity: .70;
+    z-index: 10;
 }
 
 .progressplugininfo {
@@ -16,6 +16,7 @@
 
 .progresspluginmessage {
     color:white;
+    font-weight:bold;
 }
 
 .loadingimage
